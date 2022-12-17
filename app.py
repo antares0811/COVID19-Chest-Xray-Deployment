@@ -17,7 +17,7 @@ st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache(allow_output_mutation=True)
 
 def load_model():
-	model = tf.keras.models.load_model(your_path + '\resnet101_overfit.hdf5')
+	model = tf.keras.models.load_model(your_path + '/resnet101_overfit.hdf5')
 	return model
 
 
@@ -71,12 +71,12 @@ if app_mode=='Thông tin chung':
     dung_ava = Image.open(your_path + 'member/Dung.jpg')
     st.image(dung_ava)
     st.markdown('<p class="name"> II. Lê Vũ Anh Tin - 8A2 </p>', unsafe_allow_html=True)
-    tin_ava = Image.open(your_path + r'\member\Tin.jpg')
+    tin_ava = Image.open(your_path + 'member/Tin.jpg')
     st.image(tin_ava)
     
     st.markdown('<p class="big-font"> Giáo viên hướng dẫn đề tài </p>', unsafe_allow_html=True)
     st.markdown('<p class="name"> Lê Thúy Phương Như - Giáo viên Sinh Học </p>', unsafe_allow_html=True)
-    Nhu_ava = Image.open(your_path + r'\member\GVHD_Nhu.jpg')
+    Nhu_ava = Image.open(your_path + 'member/GVHD_Nhu.jpg')
     st.image(Nhu_ava)
 elif app_mode=='Thống kê về dữ liệu huấn luyện': 
     st.title('Thống kê tổng quan về tập dữ liệu')
@@ -92,39 +92,39 @@ elif app_mode=='Thống kê về dữ liệu huấn luyện':
     st.caption('Tập dữ liệu COVID-QU-EX được các nhà nghiên cứu của Đại Học Qatar (Qatar Univerersity) thu thập, làm sạch và chuẩn bị. Tập dữ liệu bao gồm 33920 ảnh X-quang lồng ngực, trong đó bao gồm 11956 ảnh có ghi nhận mắc covid-19, 11263 ảnh có ghi nhận mắc viêm phổi không do covid và 10701 ảnh bình thường. ')
     st.caption('Nội dung nghiên cứu khoa học và ứng dụng của nhóm được thiết kế dựa trên việc huấn luyện nhóm dữ liệu Lung Segmentation Data. Dữ liệu đã được tiền xử lý và thay đổi kích thước về 256 x 256. Thông tin chi tiết của tập dữ liệu có thể tìm được ở dưới đây: ')
     st.caption('*"https://www.kaggle.com/datasets/anasmohammedtahir/covidqu"*')
-    covid_dataset = Image.open(your_path + r'\stat_image\covid_dataset.png')
+    covid_dataset = Image.open(your_path + 'stat_image/covid_dataset.png')
     st.image(covid_dataset)
     #Vẽ sample ảnh
     st.text('1) Một vài mẫu của ảnh x-quang lồng ngực mắc covid-19.')
-    covid_sample = Image.open(your_path + r'\stat_image\covid_sample.png')
+    covid_sample = Image.open(your_path + 'stat_image/covid_sample.png')
     st.image(covid_sample)
     
     st.text('2) Một vài mẫu của ảnh x-quang lồng ngực mắc viêm phổi thông thường.')
-    non_covid_sample = Image.open(your_path + r'\stat_image\non_covid_sample.png')
+    non_covid_sample = Image.open(your_path + 'stat_image/non_covid_sample.png')
     st.image(non_covid_sample)
     
     st.text('3) Một vài mẫu của ảnh x-quang lồng ngực khỏe mạnh.')
-    normal_sample = Image.open(your_path + r'\stat_image\normal_sample.png')
+    normal_sample = Image.open(your_path + 'stat_image/normal_sample.png')
     st.image(normal_sample)
     
     st.text('4) Vùng quan trọng được mô hình học máy chú ý.')
-    gradcam = Image.open(your_path + r'\stat_image\gradcam.png')
+    gradcam = Image.open(your_path + 'stat_image/gradcam.png')
     st.image(gradcam)
     
     #Vẽ thống kê tập dữ liệu
     st.markdown('<p class="big-font"> II. Thống kê về tập dữ liệu </p>', unsafe_allow_html=True)
     st.caption('Nhìn chung, dữ liệu tương đối cân bằng ở 3 lớp, trên cả tập huấn luyện và tập kiểm thử với lần lượt là ')
     st.text('1) Biểu đồ cột so sánh số lượng dữ liệu tập huấn luyện (Train dataset)')
-    train_info = Image.open(your_path + r'\stat_image\train_info.png')
+    train_info = Image.open(your_path + 'stat_image/train_info.png')
     st.image(train_info)
     st.text('2) Biểu đồ cột so sánh số lượng dữ liệu tập kiểm thử (Validation dataset)')
-    valid_info = Image.open(your_path + r'\stat_image\valid_info.png')
+    valid_info = Image.open(your_path + 'stat_image/valid_info.png')
     st.image(valid_info)
     st.text('3) Biểu đồ tròn so sánh phần trăm dữ liệu tập huấn luyện (Train dataset)')
-    train_pie = Image.open(your_path + r'\stat_image\train_pie.png')
+    train_pie = Image.open(your_path + 'stat_image/train_pie.png')
     st.image(train_pie)
     st.text('4) Biểu đồ tròn so sánh phần trăm dữ liệu tập kiểm thử (Validation dataset)')
-    valid_pie = Image.open(your_path + r'\stat_image\valid_pie.png')
+    valid_pie = Image.open(your_path + 'stat_image/valid_pie.png')
     st.image(valid_pie)
 elif app_mode=='Ứng dụng chẩn đoán':
     model = load_model()
