@@ -11,13 +11,13 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.preprocessing.image import load_img
 from io import BytesIO
 
-your_path = r""
+your_path = ""
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache(allow_output_mutation=True)
 
 def load_model():
-	model = tf.keras.models.load_model(your_path + r'\resnet101_overfit.hdf5')
+	model = tf.keras.models.load_model(your_path + '\resnet101_overfit.hdf5')
 	return model
 
 
