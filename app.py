@@ -68,7 +68,7 @@ if app_mode=='Thông tin chung':
     
     st.markdown('<p class="big-font"> Học sinh thực hiện </p>', unsafe_allow_html=True)
     st.markdown('<p class="name"> I. Trần Mạnh Dũng - 11A1 </p>', unsafe_allow_html=True)
-    dung_ava = Image.open(your_path + '\member\Dung.jpg')
+    dung_ava = Image.open(your_path + 'member\Dung.jpg')
     st.image(dung_ava)
     st.markdown('<p class="name"> II. Lê Vũ Anh Tin - 8A2 </p>', unsafe_allow_html=True)
     tin_ava = Image.open(your_path + r'\member\Tin.jpg')
