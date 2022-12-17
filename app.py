@@ -11,7 +11,7 @@ from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.preprocessing.image import load_img
 from io import BytesIO
 
-your_path = r"C:\Users\Admin\Documents\covidxray"
+your_path = r""
 
 st.set_option('deprecation.showfileUploaderEncoding', False)
 @st.cache(allow_output_mutation=True)
